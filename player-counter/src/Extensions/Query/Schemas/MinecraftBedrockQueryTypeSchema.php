@@ -1,0 +1,48 @@
+<?php
+
+namespace ArctisDev\PlayerCounter\Extensions\Query\Schemas;
+
+use ArctisDev\PlayerCounter\Extensions\Query\QueryTypeSchemaInterface;
+use Exception;
+use xPaw\MinecraftQuery;
+
+class MinecraftBedrockQueryTypeSchema implements QueryTypeSchemaInterface
+{
+    public function getId(): string
+    {
+        return 'minecraft_bedrock';
+    }
+
+    public function getName(): string
+    {
+        return 'Minecraft (Bedrock)';
+    }
+
+    /** @return ?array{hostname: string, map: string, current_players: int, max_players: int, players: ?array<array{id: string, name: string}>} */
+    public function process(string $ip, int $port): ?array
+    {
+        $query = new MinecraftQuery();
+
+        try {
+            $query->ConnectBedrock($ip, $port, 5, true);
+
+            $info = $query->GetInfo();
+
+            if (!is_array($info)) {
+                return null;
+            }
+
+            return [
+                'hostname' => $info['HostName'],
+                'map' => $info['Map'],
+                'current_players' => $info['Players'],
+                'max_players' => $info['MaxPlayers'],
+                'players' => null, // Bedrock has no player list
+            ];
+        } catch (Exception $exception) {
+            report($exception);
+        }
+
+        return null;
+    }
+}

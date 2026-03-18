@@ -1,0 +1,23 @@
+{
+    "id": "server-split",
+    "name": "Server Split",
+    "author": "ArctisDev",
+    "version": "1.0.0",
+    "description": "Self-service server provisioning with per-user pooled resource quotas.",
+    "category": "plugin",
+    "url": null,
+    "update_url": null,
+    "namespace": "ArctisDev\\ServerSplit",
+    "class": "ServerSplitPlugin",
+    "panels": [
+        "admin",
+        "app"
+    ],
+    "panel_version": null,
+    "composer_packages": null,
+    "meta": {
+        "status": "not_installed",
+        "status_message": null,
+        "load_order": 0
+    }
+}

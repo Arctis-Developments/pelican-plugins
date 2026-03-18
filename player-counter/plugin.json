@@ -1,0 +1,23 @@
+{
+    "id": "player-counter",
+    "name": "Player Counter",
+    "author": "ArctisDev",
+    "version": "1.0.1",
+    "description": "Show the amount of connected players to the server",
+    "category": "plugin",
+    "url": null,
+    "update_url": null,
+    "namespace": "ArctisDev\\PlayerCounter",
+    "class": "PlayerCounterPlugin",
+    "panels": [
+        "admin",
+        "server"
+    ],
+    "panel_version": null,
+    "composer_packages": null,
+    "meta": {
+        "status": "not_installed",
+        "status_message": null,
+        "load_order": 0
+    }
+}

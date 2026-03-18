@@ -1,0 +1,24 @@
+{
+    "id": "announcements",
+    "name": "Announcements",
+    "author": "ArctisDev",
+    "version": "1.0.0",
+    "description": "Create panel wide announcements to inform your users about stuff",
+    "category": "plugin",
+    "url": null,
+    "update_url": null,
+    "namespace": "ArctisDev\\Announcements",
+    "class": "AnnouncementsPlugin",
+    "panels": [
+        "admin",
+        "app",
+        "server"
+    ],
+    "panel_version": null,
+    "composer_packages": null,
+    "meta": {
+        "status": "not_installed",
+        "status_message": null,
+        "load_order": 0
+    }
+}
