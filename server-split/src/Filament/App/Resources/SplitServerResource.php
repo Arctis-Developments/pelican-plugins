@@ -6,6 +6,7 @@ use App\Enums\TablerIcon;
 use App\Models\Server;
 use ArctisDev\ServerSplit\Filament\App\Resources\SplitServerResource\Pages\CreateSplitServer;
 use BackedEnum;
+use Filament\Facades\Filament;
 use Filament\Resources\Resource;
 
 class SplitServerResource extends Resource
@@ -30,7 +31,12 @@ class SplitServerResource extends Resource
 
     public static function canAccess(): bool
     {
-        return filled(user());
+        return Filament::auth()->check();
+    }
+
+    public static function canCreate(): bool
+    {
+        return static::canAccess();
     }
 
     public static function getPages(): array

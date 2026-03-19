@@ -1,4 +1,4 @@
-# Server Split
+# Server Split (By ArctisDev)
 
 Self-service plugin for Pelican with aggregated per-user quotas. The user gets a shared resource pool and can split it across multiple servers without exceeding the defined total.
 

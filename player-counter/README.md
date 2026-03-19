@@ -1,4 +1,4 @@
-# Player Counter (by ArctisDev)
+# Player Counter (by Boy132 - Improve Fork by ArctisDev)
 
 Show the amount of connected players to game servers with real-time querying capabilities.
 
